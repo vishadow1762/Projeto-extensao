@@ -5,33 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Materiais - O meio ambiente em 3 dimensões</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <style>
-    body { display: flex; flex-direction: column; min-height: 100vh; }
-    main { flex: 1; }
-    .dropdown:hover .dropdown-menu { display: block; }
+    <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+    }
+
+    /* Esconde checkbox */
+    #toggle-grupos {
+      display: none;
+    }
+
+    /* Estilo do label como botão */
+    label[for="toggle-grupos"] {
+      cursor: pointer;
+      color: white;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: text-decoration 0.3s;
+    }
+    label[for="toggle-grupos"]:hover {
+      text-decoration: underline;
+    }
+
+    /* Dropdown menu escondido */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #047857; /* verde */
+      margin-top: 0.5rem;
+      border-radius: 0.375rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      width: 12rem;
+      z-index: 10;
+    }
+
+    /* Mostrar menu quando checkbox marcado */
+    #toggle-grupos:checked + label + .dropdown-menu {
+      display: block;
+    }
+
+    /* Links do menu */
+    .dropdown-menu a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: white;
+      white-space: nowrap;
+      transition: background-color 0.2s;
+    }
+    .dropdown-menu a:hover {
+      background-color: #065f46; /* verde escuro */
+    }
+
+    /* Container dropdown para posicionamento */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
   <header class="bg-green-700 text-white p-4 shadow-md">
     <div class="container mx-auto flex justify-between items-center">
       <div class="flex items-center space-x-4">
-        <img src="https://educadiversidade.unesp.br/wp-content/uploads/2021/11/3000px-Logo_Unesp-branco-2048x683.png" alt="Logo UNESP" class="h-10 w-auto">
+        <img src="https://educadiversidade.unesp.br/wp-content/uploads/2021/11/3000px-Logo_Unesp-branco-2048x683.png" alt="Logo UNESP" class="h-10 w-auto" />
         <h1 class="text-xl font-bold">O meio ambiente em 3 dimensões</h1>
       </div>
       <nav>
         <ul class="flex space-x-4 items-center">
           <li><a href="index.html" class="hover:underline">Início</a></li>
           <li><a href="projeto.html" class="hover:underline">O Projeto</a></li>
-          <li class="relative dropdown">
-            <button class="hover:underline">Grupos</button>
-            <ul class="absolute dropdown-menu bg-green-700 text-white mt-2 rounded shadow-md hidden z-10 w-40">
-              <li><a href="grupo1.html" class="block px-4 py-2 hover:bg-green-600">Grupo 1</a></li>
-              <li><a href="grupo2.html" class="block px-4 py-2 hover:bg-green-600">Grupo 2</a></li>
-              <li><a href="grupo3.html" class="block px-4 py-2 hover:bg-green-600">Grupo 3</a></li>
-              <li><a href="grupo4.html" class="block px-4 py-2 hover:bg-green-600">Grupo 4</a></li>
-              <li><a href="grupo5.html" class="block px-4 py-2 hover:bg-green-600">Grupo 5</a></li>
+
+          <li class="dropdown">
+            <input type="checkbox" id="toggle-grupos" />
+            <label for="toggle-grupos">Grupos</label>
+
+            <ul class="dropdown-menu rounded shadow-md">
+              <li><a href="grupo1.html">Grupo 1</a></li>
+              <li><a href="grupo2.html">Grupo 2</a></li>
+              <li><a href="grupo3.html">Grupo 3</a></li>
+              <li><a href="grupo4.html">Grupo 4</a></li>
+              <li><a href="grupo5.html">Grupo 5</a></li>
             </ul>
           </li>
+
           <li><a href="materiais.html" class="hover:underline">Materiais</a></li>
         </ul>
       </nav>
