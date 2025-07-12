@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materiais - O meio ambiente em 3 dimensões</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    main { flex: 1; }
+    .dropdown:hover .dropdown-menu { display: block; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-green-700 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="https://educadiversidade.unesp.br/wp-content/uploads/2021/11/3000px-Logo_Unesp-branco-2048x683.png" alt="Logo UNESP" class="h-10 w-auto">
+        <h1 class="text-xl font-bold">O meio ambiente em 3 dimensões</h1>
+      </div>
+      <nav>
+        <ul class="flex space-x-4 items-center">
+          <li><a href="index.html" class="hover:underline">Início</a></li>
+          <li><a href="projeto.html" class="hover:underline">O Projeto</a></li>
+          <li class="relative dropdown">
+            <button class="hover:underline">Grupos</button>
+            <ul class="absolute dropdown-menu bg-green-700 text-white mt-2 rounded shadow-md hidden z-10 w-40">
+              <li><a href="grupo1.html" class="block px-4 py-2 hover:bg-green-600">Grupo 1</a></li>
+              <li><a href="grupo2.html" class="block px-4 py-2 hover:bg-green-600">Grupo 2</a></li>
+              <li><a href="grupo3.html" class="block px-4 py-2 hover:bg-green-600">Grupo 3</a></li>
+              <li><a href="grupo4.html" class="block px-4 py-2 hover:bg-green-600">Grupo 4</a></li>
+              <li><a href="grupo5.html" class="block px-4 py-2 hover:bg-green-600">Grupo 5</a></li>
+            </ul>
+          </li>
+          <li><a href="materiais.html" class="hover:underline">Materiais</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container mx-auto p-6">
+    <section class="text-center my-8">
+      <h2 class="text-3xl font-bold mb-4">Materiais Educativos</h2>
+      <p class="text-lg mb-6 max-w-3xl mx-auto">Aqui você encontrará os recursos produzidos por todos os grupos: PDFs, apresentações, vídeos e outros materiais.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Material do Grupo 1</h3>
+          <p>Breve descrição do conteúdo produzido pelo Grupo 1.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Material do Grupo 2</h3>
+          <p>Breve descrição do conteúdo produzido pelo Grupo 2.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Material do Grupo 3</h3>
+          <p>Breve descrição do conteúdo produzido pelo Grupo 3.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Material do Grupo 4</h3>
+          <p>Breve descrição do conteúdo produzido pelo Grupo 4.</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Material do Grupo 5</h3>
+          <p>Breve descrição do conteúdo produzido pelo Grupo 5.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-green-700 text-white text-center py-4">
+    <p>&copy; 2025 O meio ambiente em 3 dimensões - Projeto de Extensão</p>
+    <p class="mt-1 text-sm">Projeto desenvolvido pela UNESP - São José dos Campos, curso de Engenharia Ambiental</p>
+    <p class="text-sm">Proposto pelo professor Rodrigo Custódio Urban</p>
+  </footer>
+</body>
+</html>
